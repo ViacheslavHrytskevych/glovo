@@ -14,3 +14,9 @@ import java.util.List;
 @AllArgsConstructor
 @NoArgsConstructor
 public class Order {
+
+    private int id;
+    private LocalDate date;
+    private List<Product> products = new ArrayList<>();
+
+}
