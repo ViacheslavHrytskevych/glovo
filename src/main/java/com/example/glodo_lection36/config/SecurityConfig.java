@@ -25,8 +25,8 @@ public class SecurityConfig {
     public SecurityFilterChain securityFilterChain(HttpSecurity http) throws Exception {
         http.formLogin(withDefaults())
                 .authorizeHttpRequests((authz) -> authz
-                .requestMatchers(HttpMethod.POST, "/order").hasRole("ADMIN")
-                .anyRequest().authenticated());
+                        .requestMatchers(HttpMethod.POST, "/order").hasRole("ADMIN")
+                        .anyRequest().authenticated());
 
         return http.build();
     }
